@@ -1,20 +1,4 @@
-# neural-motifs
-Code for Neural Motifs: Scene Graph Parsing with Global Context (CVPR 2018)
-
-This repository contains data and code for the paper [Neural Motifs: Scene Graph Parsing with Global Context](https://arxiv.org/abs/1711.06640v2) - now updated for the CVPR camera ready! this should be the same as what's available via the CVPR site when that appears, just it has the supplemental section rolled into the same PDF. For the project page (as well as links to the baseline checkpoints), check out [rowanzellers.com/neuralmotifs](https://rowanzellers.com/neuralmotifs). If the paper significantly inspires you, we request that you cite our work:
-
-### Bibtex
-
-```
-@inproceedings{zellers2018scenegraphs,
-  title={Neural Motifs: Scene Graph Parsing with Global Context},
-  author={Zellers, Rowan and Yatskar, Mark and Thomson, Sam and Choi, Yejin},
-  booktitle = "Conference on Computer Vision and Pattern Recognition",  
-  year={2018}
-}
-```
 # Setup
-
 
 0. Install python3.6, pytorch 0.3.1 and CUDA 9.0. 
 
@@ -35,4 +19,20 @@ Note: You might have to modify the learning rate and batch size, particularly if
 
 # help
 
-Feel free to ping me if you encounter trouble getting it to work!
+Code for Neural Motifs: Scene Graph Parsing with Global Context (CVPR 2018)
+
+This repository contains data and code for the paper [Neural Motifs: Scene Graph Parsing with Global Context](https://arxiv.org/abs/1711.06640v2) - now updated for the CVPR camera ready! this should be the same as what's available via the CVPR site when that appears, just it has the supplemental section rolled into the same PDF. For the project page (as well as links to the baseline checkpoints), check out [rowanzellers.com/neuralmotifs](https://rowanzellers.com/neuralmotifs). If the paper significantly inspires you, we request that you cite our work:
+
+### Bibtex
+
+```
+@inproceedings{zellers2018scenegraphs,
+  title={Neural Motifs: Scene Graph Parsing with Global Context},
+  author={Zellers, Rowan and Yatskar, Mark and Thomson, Sam and Choi, Yejin},
+  booktitle = "Conference on Computer Vision and Pattern Recognition",  
+  year={2018}
+}
+```
+
+
+
