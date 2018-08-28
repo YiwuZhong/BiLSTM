@@ -2,7 +2,7 @@
 
 0. Install python3.6, pytorch 0.3.1 and CUDA 9.0. 
 
-1. Download [data materials](https://drive.google.com/file/d/1pny0iRpTUch_vp2Q15dE4RajezZuOlC2/view?usp=sharing). Put all glove files into "data/" folder. Put all json and h5 files into "data/stanford_filtered/". Download the VG images [part1](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip) [part2](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip). Extract these images to "data/visual_genome/VG_100K/" and link to them in `config.py` (eg. currently I have `'VG_IMAGES = '/home/yiwuzhong/BiLSTM/data/visual_genome/VG_100K''`).
+1. Download [data materials](https://drive.google.com/file/d/1pny0iRpTUch_vp2Q15dE4RajezZuOlC2/view?usp=sharing). Put all glove files into ```data/``` folder. Put all json and h5 files into ```data/stanford_filtered/```. Download the VG images [part1](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip) [part2](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip). Extract these images to "data/visual_genome/VG_100K/" and link to them in `config.py` (eg. currently I have ```VG_IMAGES = '/home/yiwuzhong/BiLSTM/data/visual_genome/VG_100K'```).
 
 2. You'll also need to fix your PYTHONPATH, like: ```export PYTHONPATH=/home/yiwuzhong/BiLSTM```, which can be added to ```~/.bashrc``` file.
 
