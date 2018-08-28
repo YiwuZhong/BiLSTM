@@ -2,18 +2,15 @@
 
 0. Install python3.6, pytorch 0.3.1 and CUDA 9.0. 
 
-1. Update the config file with the dataset paths. Specifically:
-    - Visual Genome (the VG_100K folder, image_data.json, VG-SGG.h5, and VG-SGG-dicts.json). See data/stanford_filtered/README.md for the steps I used to download these.
-    - You'll also need to fix your PYTHONPATH: ```export PYTHONPATH=/home/rowan/code/scene-graph``` 
+1. Download data materials(https://drive.google.com/file/d/1pny0iRpTUch_vp2Q15dE4RajezZuOlC2/view?usp=sharing). Put all glove files into "data/" folder. Put all json and h5 files into "data/stanford_filtered/". Download the VG images [part1](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip) [part2](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip). Extract these images to "data/visual_genome/VG_100K/" and link to them in `config.py` (eg. currently I have `'VG_IMAGES = '/home/yiwuzhong/BiLSTM/data/visual_genome/VG_100K''`).
 
-2. Compile everything. run ```make``` in the main directory: this compiles the Bilinear Interpolation operation for the RoIs as well as the Highway LSTM.
+2. You'll also need to fix your PYTHONPATH, like: ```export PYTHONPATH=/home/yiwuzhong/BiLSTM```, which can be added to ```~/.bashrc``` file.
 
-3. Pretrain VG detection. The old version involved pretraining COCO as well, but we got rid of that for simplicity. Run ./scripts/pretrain_detector.sh
-Note: You might have to modify the learning rate and batch size, particularly if you don't have 3 Titan X GPUs (which is what I used). [You can also download the pretrained detector checkpoint here.](https://drive.google.com/open?id=11zKRr2OF5oclFL47kjFYBOxScotQzArX)
+3. Compile everything. run ```make``` in the main directory
 
-4. Train VG scene graph classification: run ./scripts/train_models_sgcls.sh 2 (will run on GPU 2). OR, download the MotifNet-cls checkpoint here: [Motifnet-SGCls/PredCls](https://drive.google.com/open?id=12qziGKYjFD3LAnoy4zDT3bcg5QLC0qN6).
-5. Refine for detection: run ./scripts/refine_for_detection.sh 2 or download the [Motifnet-SGDet](https://drive.google.com/open?id=1thd_5uSamJQaXAPVGVOUZGAOfGCYZYmb) checkpoint.
-6. Evaluate: Refer to the scripts ./scripts/eval_models_sg[cls/det].sh.
+4. Change and run ```./scripts/refine_for_detection.sh 2``` under the ```BiLSTM``` folder. Before running the script, modify the ```-ckpt``` where we download the pretrained model, and ```-save_dir``` where we save our checkpoints. Also, we can change ```-nepoch``` to determine how many epoches we're going to train. You can also download the "triplet margin loss" checkpoint here(https://drive.google.com/file/d/1T_lCIyunF4xd3tXSsMbASdAaJs_5OP_b/view?usp=sharing). And original sgdet checkpoints here(https://drive.google.com/file/d/1BMnw2NGERUCrZ8ZMAyEeZnhhcJ-x_1EU/view?usp=sharing).
+
+5. Evaluate: Run ```./scripts/eval_models_sgdet.sh 2```.
 
 7. During training, codes will generate ckpt and "tripscore.txt".
 
