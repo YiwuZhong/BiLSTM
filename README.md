@@ -31,6 +31,8 @@ Note: You might have to modify the learning rate and batch size, particularly if
 5. Refine for detection: run ./scripts/refine_for_detection.sh 2 or download the [Motifnet-SGDet](https://drive.google.com/open?id=1thd_5uSamJQaXAPVGVOUZGAOfGCYZYmb) checkpoint.
 6. Evaluate: Refer to the scripts ./scripts/eval_models_sg[cls/det].sh.
 
+7. During training, codes will generate ckpt and "tripscore.txt".
+
 # help
 
 Feel free to ping me if you encounter trouble getting it to work!
