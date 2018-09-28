@@ -48,7 +48,7 @@ class VG(Dataset):
         # Initialize
         self.roidb_file = roidb_file  # HDF5 containing the GT boxes, classes, and relationships
         self.dict_file = dict_file  # JSON Contains mapping of classes/relationships to words
-        self.image_file = image_file  # HDF5 containing image filenames
+        self.image_file = image_file  # JSON containing image filenames
 
         self.filter_non_overlap = filter_non_overlap
         self.filter_duplicate_rels = filter_duplicate_rels and self.mode == 'train'
