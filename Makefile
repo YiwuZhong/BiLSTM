@@ -1,4 +1,4 @@
-export PATH := /usr/local/cuda-9.1/bin:$(PATH)
+#export PATH := /usr/local/cuda-9.0/bin:$(PATH)
 
 all: draw_rectangles box_intersections nms roi_align lstm
 
@@ -11,4 +11,4 @@ nms:
 roi_align:
 	cd lib/fpn/roi_align; make
 lstm:
-	cd lib/lstm/highway_lstm_cuda; ./make.sh
+	cd lib/lstm/highway_lstm_cuda; bash ./make.sh
