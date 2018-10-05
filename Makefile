@@ -12,3 +12,7 @@ roi_align:
 	cd lib/fpn/roi_align; make
 lstm:
 	cd lib/lstm/highway_lstm_cuda; bash ./make.sh
+
+clean:
+    cd lib/fpn/nms; make clean
+    cd lib/fpn/roi_align; make clean
