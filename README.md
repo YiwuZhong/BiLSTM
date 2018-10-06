@@ -1,5 +1,9 @@
 # Setup
 
+Check Makefile, .gitnore and other intermediate files (.o, .so, .pyc); 
+
+Match ```arch=compute_60,code=sm_60``` to current GPU cards
+
 0. Install python3.6, pytorch 0.3.1 and CUDA 9.0. 
 
 1. Download [data materials](https://drive.google.com/file/d/1pny0iRpTUch_vp2Q15dE4RajezZuOlC2/view?usp=sharing). Put all glove files into ```data/``` folder. Put all json and h5 files into ```data/stanford_filtered/```. Download the VG images [part1](https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip) [part2](https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip). Extract these images to "data/visual_genome/VG_100K/" and link to them in `config.py` (eg. currently I have ```VG_IMAGES = '/home/yiwuzhong/VG/VG_100K'```).
